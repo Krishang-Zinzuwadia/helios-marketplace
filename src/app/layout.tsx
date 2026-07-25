@@ -23,11 +23,11 @@ const metadataBase = new URL(
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: "Helios Marketplace — Small models, serious work",
+    default: "Helios Marketplace — Small models for specific jobs",
     template: "%s — Helios Marketplace",
   },
   description:
-    "Explore 15 functional specialist SLM profiles for software delivery in the local-first Helios runtime.",
+    "Meet 15 Helios specialists for front-end, back-end, DevOps, security, testing, data, and more.",
   applicationName: "Helios Marketplace",
   category: "technology",
   keywords: [
@@ -47,23 +47,23 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Helios Marketplace",
-    title: "Helios Marketplace — Small models, serious work",
+    title: "Helios Marketplace — Small models for specific jobs",
     description:
-      "Explore 15 role-scoped SLM profiles with clear inputs, outputs, responsibilities, and operating boundaries.",
+      "Meet 15 small-model specialists for front-end, back-end, DevOps, security, testing, data, and more.",
     images: [
       {
         url: "/og.png",
         width: 1730,
         height: 909,
-        alt: "Helios Marketplace — Small models. Serious work.",
+        alt: "Helios Marketplace — Small models for specific jobs.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Helios Marketplace — Small models, serious work",
+    title: "Helios Marketplace — Small models for specific jobs",
     description:
-      "Explore 15 role-scoped SLM profiles with clear inputs, outputs, responsibilities, and operating boundaries.",
+      "Meet 15 small-model specialists for front-end, back-end, DevOps, security, testing, data, and more.",
     images: ["/og.png"],
   },
   robots: {

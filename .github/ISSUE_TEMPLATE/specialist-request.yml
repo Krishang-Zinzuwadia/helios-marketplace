@@ -1,55 +1,55 @@
-name: Specialist SLM request
-description: Suggest a functional specialist role for the Helios Marketplace.
+name: Suggest a specialist
+description: Have a job Helios should be good at? Tell us about it.
 title: "Specialist request: "
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping shape the catalog. These entries define role blueprints; they are not trained weights, installable packages, or runtime compatibility certifications yet.
+        Got a role we’re missing? Tell us what it should do. The catalog is still a UI preview, so new entries are role ideas, not downloadable models.
   - type: input
     id: specialization
     attributes:
-      label: Specialist name
-      description: Name the bounded role this SLM should perform.
+      label: What should we call it?
+      description: Give it a short, specific name.
       placeholder: "Example: Accessibility Audit SLM"
     validations:
       required: true
   - type: textarea
     id: job
     attributes:
-      label: Job to be done
-      description: What concrete responsibility should belong to this specialist?
-      placeholder: "Review a rendered product flow and report prioritized accessibility defects."
+      label: What should it do?
+      description: Describe the job in a sentence or two.
+      placeholder: "Review a product flow and point out the accessibility problems worth fixing first."
     validations:
       required: true
   - type: textarea
     id: inputs
     attributes:
-      label: Required inputs
-      description: What context or artifacts must the specialist receive?
-      placeholder: "Rendered pages, accessibility standard, target browsers..."
+      label: What would you give it?
+      description: List the files, context, or data it would need.
+      placeholder: "Rendered pages, accessibility rules, target browsers..."
     validations:
       required: true
   - type: textarea
     id: outputs
     attributes:
-      label: Expected outputs
-      description: What reviewable artifact should the specialist produce?
-      placeholder: "Ranked findings with evidence and remediation guidance..."
+      label: What should it hand back?
+      description: Describe the result someone should be able to use or review.
+      placeholder: "A ranked list of problems with proof and suggested fixes..."
     validations:
       required: true
   - type: textarea
     id: boundary
     attributes:
-      label: Operating boundary and evidence
-      description: What must this role never do, and how should its work be verified?
+      label: Where should it stop?
+      description: What should it never do, and how would you check its work?
     validations:
       required: true
   - type: checkboxes
     id: preview
     attributes:
-      label: Preview boundary
+      label: One last check
       options:
-        - label: I understand this request defines a catalog role, not a trained or Helios-compatible model package.
+        - label: I understand this is a catalog idea, not a model upload or a compatibility request.
           required: true

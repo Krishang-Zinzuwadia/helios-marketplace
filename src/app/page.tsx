@@ -8,21 +8,21 @@ import { SpecialistCatalog } from "@/components/specialist-catalog";
 
 const previewSpecialists = [
   {
-    lane: "BUILD / INTERFACE",
+    lane: "BUILD / FRONT END",
     name: "Front-end SLM",
-    output: "Accessible UI",
+    output: "Working interface",
     domain: "BUILD",
     tone: "light",
   },
   {
-    lane: "BUILD / SERVICES",
+    lane: "BUILD / BACK END",
     name: "Back-end SLM",
-    output: "Tested service",
+    output: "Tested API",
     domain: "BUILD",
     tone: "mid",
   },
   {
-    lane: "OPERATE / DELIVERY",
+    lane: "OPERATE / RELEASE",
     name: "DevOps SLM",
     output: "Release pipeline",
     domain: "OPERATE",
@@ -59,7 +59,7 @@ export default function Home() {
         </nav>
 
         <a className="headerAction" href="#catalog">
-          Explore specialists
+          Browse all 15
           <ArrowDown size={14} strokeWidth={1.8} aria-hidden="true" />
         </a>
       </header>
@@ -68,19 +68,19 @@ export default function Home() {
         <div className="heroCopy">
           <div className="eyebrow">
             <Sparkles size={13} strokeWidth={1.6} aria-hidden="true" />
-            Curated for local intelligence
+            15 specialist SLMs
           </div>
           <h1 id="hero-title">
             Small models.
-            <span>Serious work.</span>
+            <span>Clear jobs.</span>
           </h1>
           <p className="heroLead">
-            Browse 15 role-focused small-model blueprints for the Helios local
-            runtime—each scoped to a clear job, input, output, and boundary.
+            Front end, back end, DevOps, security, and 11 more. Pick the one
+            that fits the job. Helios keeps the work local.
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#catalog">
-              Browse specialists
+              See all 15
               <ArrowDown size={16} strokeWidth={1.8} aria-hidden="true" />
             </a>
             <a
@@ -90,7 +90,7 @@ export default function Home() {
               rel="noreferrer"
             >
               <Code2 size={16} strokeWidth={1.7} aria-hidden="true" />
-              View source
+              View on GitHub
             </a>
           </div>
         </div>
@@ -100,10 +100,10 @@ export default function Home() {
           aria-label="A preview of specialist SLMs in the catalog"
         >
           <div className="stageTopline">
-            <span>CATALOG / PREVIEW</span>
+            <span>A FEW EXAMPLES</span>
             <span className="status">
               <i />
-              15 SPECIALISTS
+              15 ROLES
             </span>
           </div>
           <div className="modelStack">
@@ -132,9 +132,9 @@ export default function Home() {
             ))}
           </div>
           <div className="stageFooter">
-            <span>ROLE-SCOPED</span>
-            <span>CLEAR OUTPUTS</span>
-            <span>POLICY-BOUND</span>
+            <span>ONE JOB EACH</span>
+            <span>KNOWN INPUTS</span>
+            <span>CLEAR LIMITS</span>
           </div>
         </div>
       </section>
@@ -142,15 +142,15 @@ export default function Home() {
       <div className="signalStrip" aria-label="Marketplace principles">
         <div>
           <span>01</span>
-          <strong>Role-specific by design</strong>
+          <strong>Made for one job</strong>
         </div>
         <div>
           <span>02</span>
-          <strong>Clear inputs and outputs</strong>
+          <strong>Tells you what it needs</strong>
         </div>
         <div>
           <span>03</span>
-          <strong>Explicit operating boundaries</strong>
+          <strong>Knows when to stop</strong>
         </div>
       </div>
 
@@ -158,11 +158,10 @@ export default function Home() {
         <div className="sectionHeading">
           <div>
             <span className="sectionKicker">THE CATALOG / 001</span>
-            <h2 id="catalog-title">Find the right specialist.</h2>
+            <h2 id="catalog-title">Pick a specialist.</h2>
           </div>
           <p>
-            Front-end, back-end, DevOps, security, data, QA, and more—each
-            scoped to a concrete delivery lane.
+            Search by role, tool, or the kind of work you need done.
           </p>
         </div>
 
@@ -171,21 +170,21 @@ export default function Home() {
 
       <section className="principles" id="principles" aria-labelledby="principles-title">
         <div className="principlesIntro">
-          <span className="sectionKicker">WHY HELIOS / 002</span>
-          <h2 id="principles-title">Intelligence should feel personal again.</h2>
+          <span className="sectionKicker">WHY SPECIALISTS / 002</span>
+          <h2 id="principles-title">One model doesn’t need to do everything.</h2>
         </div>
         <div className="principlesBody">
           <p>
-            One general model is not always the right tool. Helios is built
-            around smaller, focused systems with a known job, a deliberate
-            handoff, and a boundary they should not cross.
+            A front-end task and a security review are different jobs. Helios
+            gives each one a smaller brief, then hands the work over when
+            another specialist should take it from there.
           </p>
           <a
             href="https://github.com/desync-org/helios-marketplace"
             target="_blank"
             rel="noreferrer"
           >
-            Follow the build on GitHub
+            See how Helios is built
             <ArrowUpRight size={16} strokeWidth={1.6} />
           </a>
         </div>
@@ -199,23 +198,23 @@ export default function Home() {
         <div className="statusLedger" aria-label="Current marketplace status">
           <div>
             <span>01 / CATALOG</span>
-            <strong>15 hardcoded specialists</strong>
+            <strong>15 roles, hardcoded for now</strong>
           </div>
           <div>
             <span>02 / RUNTIME</span>
-            <strong>Manifests not connected</strong>
+            <strong>Runtime hookup comes next</strong>
           </div>
           <div>
             <span>03 / EVIDENCE</span>
-            <strong>Evaluations pending</strong>
+            <strong>No eval results yet</strong>
           </div>
         </div>
         <div className="contributeCopy">
-          <span className="sectionKicker">OPEN REGISTRY / 003</span>
-          <h2 id="contribute-title">What should Helios specialize in next?</h2>
+          <span className="sectionKicker">MISSING A ROLE? / 003</span>
+          <h2 id="contribute-title">What should we add next?</h2>
           <p>
-            Suggest a bounded role, define the input and expected output, and
-            tell us which operating boundary the profile should make visible.
+            Tell us the job, what you would give it, what you expect back, and
+            anything it should never touch.
           </p>
           <div className="contributeActions">
             <a
@@ -224,7 +223,7 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              Request a specialist
+              Suggest a role
               <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
             </a>
             <a
@@ -247,7 +246,7 @@ export default function Home() {
           </span>
           <span>HELIOS MARKETPLACE</span>
         </div>
-        <p>Small models, scoped to real work.</p>
+        <p>Small models for specific jobs.</p>
         <span>© 2026 DESYNC</span>
       </footer>
     </main>

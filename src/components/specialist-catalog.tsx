@@ -99,21 +99,21 @@ export function SpecialistCatalog() {
       <div className="previewNotice">
         <span className="noticeDot" aria-hidden="true" />
         <p>
-          <strong>Functional catalog preview.</strong> These 15 role blueprints
-          are hardcoded for now. Runtime manifests, weights, evaluations, and
-          install flows are not connected yet.
+          <strong>Early preview.</strong> These 15 roles are hardcoded. Model
+          files, Helios runtime setup, eval results, and install buttons come
+          later.
         </p>
       </div>
 
       <div className="catalogControls">
         <div className="searchField">
-          <label htmlFor="specialist-search">Search the specialist catalog</label>
+          <label htmlFor="specialist-search">Search specialists</label>
           <div className="searchInputWrap">
             <Search size={17} strokeWidth={1.6} aria-hidden="true" />
             <input
               id="specialist-search"
               type="search"
-              placeholder="Search role, capability, input, or output"
+              placeholder='Try “front-end”, “security”, or “API”'
               value={query}
               onChange={(event) => setQuery(event.target.value)}
             />
@@ -141,9 +141,9 @@ export function SpecialistCatalog() {
               value={sort}
               onChange={(event) => setSort(event.target.value as SortValue)}
             >
-              <option value="workflow">Workflow order</option>
-              <option value="alphabetical">Alphabetical</option>
-              <option value="domain">Primary domain</option>
+              <option value="workflow">Catalog order</option>
+              <option value="alphabetical">A–Z</option>
+              <option value="domain">By area</option>
             </select>
             <ChevronDown size={14} strokeWidth={1.7} aria-hidden="true" />
           </div>
@@ -153,7 +153,7 @@ export function SpecialistCatalog() {
       <div className="filterRow">
         <div
           className="filterChips"
-          aria-label="Filter specialists by domain"
+          aria-label="Filter specialists by area"
         >
           {filters.map((filter) => (
             <button
@@ -187,7 +187,7 @@ export function SpecialistCatalog() {
                   {String(visibleProfiles.length).padStart(2, "0")}
                 </span>
                 <span className="profileState">
-                  {profile.featured ? "Core specialist" : "Functional profile"}
+                  {profile.featured ? "Featured" : "Specialist"}
                 </span>
               </div>
 
@@ -208,19 +208,19 @@ export function SpecialistCatalog() {
 
               <dl className="modelMetadata">
                 <div>
-                  <dt>Focus</dt>
+                  <dt>Best for</dt>
                   <dd>{profile.focus}</dd>
                 </div>
                 <div>
-                  <dt>Workflow</dt>
+                  <dt>Job</dt>
                   <dd>{profile.workflow}</dd>
                 </div>
                 <div>
-                  <dt>Accepts</dt>
+                  <dt>Needs</dt>
                   <dd>{profile.input}</dd>
                 </div>
                 <div>
-                  <dt>Produces</dt>
+                  <dt>Gives back</dt>
                   <dd>{profile.output}</dd>
                 </div>
               </dl>
@@ -236,17 +236,17 @@ export function SpecialistCatalog() {
 
               <details className="profileDetails">
                 <summary>
-                  Inspect role blueprint
+                  See what it does
                   <ChevronDown size={15} strokeWidth={1.7} aria-hidden="true" />
                 </summary>
                 <div className="profileDetailsBody">
-                  <h4>Responsibilities</h4>
+                  <h4>What it handles</h4>
                   <ul>
                     {profile.responsibilities.map((responsibility) => (
                       <li key={responsibility}>{responsibility}</li>
                     ))}
                   </ul>
-                  <h4>Operating boundary</h4>
+                  <h4>What it won’t do</h4>
                   <p className="profileGuardrail">{profile.guardrail}</p>
                 </div>
               </details>
@@ -256,13 +256,12 @@ export function SpecialistCatalog() {
       ) : (
         <div className="emptyCatalog">
           <span>00 / 15</span>
-          <h3>No specialists match that search.</h3>
+          <h3>Nothing matched.</h3>
           <p>
-            Try another role, domain, input, or capability—or return to the full
-            catalog.
+            Try a simpler search, or clear the filters.
           </p>
           <button type="button" onClick={resetCatalog}>
-            Reset the catalog
+            Show all specialists
           </button>
         </div>
       )}
@@ -270,7 +269,7 @@ export function SpecialistCatalog() {
       {isFiltered && visibleProfiles.length > 0 && (
         <button className="resetCatalog" type="button" onClick={resetCatalog}>
           <X size={14} strokeWidth={1.8} aria-hidden="true" />
-          Clear search and filters
+          Clear filters
         </button>
       )}
     </div>
