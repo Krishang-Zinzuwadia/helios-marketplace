@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s — Helios Marketplace",
   },
   description:
-    "Discover a curated catalog of small language models for the local-first Helios runtime.",
+    "Explore 15 functional specialist SLM profiles for software delivery in the local-first Helios runtime.",
   applicationName: "Helios Marketplace",
   category: "technology",
   keywords: [
@@ -35,7 +35,10 @@ export const metadata: Metadata = {
     "SLM",
     "local AI",
     "Helios",
-    "open models",
+    "specialist SLMs",
+    "software agents",
+    "front-end SLM",
+    "DevOps SLM",
   ],
   alternates: {
     canonical: "/",
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Helios Marketplace",
     title: "Helios Marketplace — Small models, serious work",
     description:
-      "Explore 15 curated small language model profiles for the local-first Helios runtime.",
+      "Explore 15 role-scoped SLM profiles with clear inputs, outputs, responsibilities, and operating boundaries.",
     images: [
       {
         url: "/og.png",
@@ -60,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Helios Marketplace — Small models, serious work",
     description:
-      "Explore 15 curated small language model profiles for the local-first Helios runtime.",
+      "Explore 15 role-scoped SLM profiles with clear inputs, outputs, responsibilities, and operating boundaries.",
     images: ["/og.png"],
   },
   robots: {

@@ -1,15 +1,19 @@
 # Helios Marketplace
 
-A curated, local-first marketplace for discovering small language models for the Helios runtime.
+A local-first marketplace concept for discovering specialist small language
+model roles for the Helios runtime.
 
-The first release is a single premium catalog experience with:
+The current single-page release includes:
 
-- 15 hardcoded SLM profiles backed by official model-card links
-- search across model names, makers, roles, capabilities, and licenses
-- capability filters and parameter/context sorting
-- explicit licensing and compatibility caveats
-- responsive, keyboard-friendly interactions
-- a bespoke Open Graph preview and production metadata
+- 15 hardcoded specialist SLM profiles spanning build, operations, security,
+  quality, data, and knowledge work
+- clear accepted inputs, expected outputs, responsibilities, and guardrails for
+  every profile
+- search across roles, workflows, capabilities, inputs, and outputs
+- domain filters plus workflow, alphabetical, and domain sorting
+- expandable role blueprints with keyboard-friendly native interactions
+- responsive monochrome UI, a bespoke Open Graph preview, and production
+  metadata
 
 ## Development
 
@@ -29,4 +33,7 @@ npm run build
 
 ## Preview status
 
-The catalog is deliberately hardcoded while the model registry and installation flow are being designed. Profiles do not currently certify Helios runtime compatibility, install weights, or validate a user’s hardware.
+The catalog is deliberately hardcoded while the runtime registry is being
+designed. The profiles are functional role definitions, not trained models:
+they do not install weights, connect runtime manifests, certify compatibility,
+or provide evaluation evidence yet.

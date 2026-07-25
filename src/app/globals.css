@@ -721,7 +721,7 @@ footer {
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
-  min-height: 590px;
+  min-height: 610px;
   overflow: hidden;
   padding: 22px;
   position: relative;
@@ -902,30 +902,76 @@ footer {
   text-transform: uppercase;
 }
 
-.modelCaveat {
-  color: #777773;
-  font-size: 9px;
-  line-height: 1.45;
-  margin: 13px 0 0;
+.profileDetails {
+  border-top: 1px solid var(--line);
+  margin-top: auto;
 }
 
-.modelLink {
+.profileDetails summary {
   align-items: center;
-  border-top: 1px solid var(--line);
+  cursor: pointer;
   display: flex;
   font-size: 11px;
   justify-content: space-between;
-  margin-top: auto;
+  list-style: none;
   min-height: 49px;
+  outline: none;
   padding-top: 12px;
 }
 
-.modelLink svg {
+.profileDetails summary::-webkit-details-marker {
+  display: none;
+}
+
+.profileDetails summary svg {
   transition: transform 180ms ease;
 }
 
-.modelLink:hover svg {
-  transform: translate(2px, -2px);
+.profileDetails[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.profileDetails summary:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.profileDetailsBody {
+  border-top: 1px solid var(--line);
+  padding: 17px 0 2px;
+}
+
+.profileDetailsBody h4 {
+  color: #777773;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+}
+
+.profileDetailsBody ul {
+  color: #5f5f5b;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0 0 17px;
+  padding-left: 17px;
+}
+
+.profileDetailsBody li + li {
+  margin-top: 6px;
+}
+
+.profileGuardrail {
+  background: rgba(10, 10, 10, 0.045);
+  border: 1px solid rgba(10, 10, 10, 0.07);
+  border-radius: calc(var(--radius) - 5px);
+  color: #555551;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 11px 12px;
 }
 
 .emptyCatalog {
