@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 const deploymentHost =
-  process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
+  process.env.VERCEL_ENV === "production"
+    ? (process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL)
+    : (process.env.VERCEL_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL);
 const metadataBase = new URL(
   deploymentHost ? `https://${deploymentHost}` : "http://localhost:3000",
 );
