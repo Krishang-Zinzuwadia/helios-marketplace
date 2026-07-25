@@ -188,6 +188,55 @@ export default function Home() {
         </div>
       </section>
 
+      <section
+        className="contribute"
+        id="contribute"
+        aria-labelledby="contribute-title"
+      >
+        <div className="statusLedger" aria-label="Current marketplace status">
+          <div>
+            <span>01 / CATALOG</span>
+            <strong>15 hardcoded profiles</strong>
+          </div>
+          <div>
+            <span>02 / INSTALLS</span>
+            <strong>Not connected yet</strong>
+          </div>
+          <div>
+            <span>03 / EVIDENCE</span>
+            <strong>Compatibility pending</strong>
+          </div>
+        </div>
+        <div className="contributeCopy">
+          <span className="sectionKicker">OPEN REGISTRY / 003</span>
+          <h2 id="contribute-title">What should Helios run next?</h2>
+          <p>
+            Request a model, suggest a specialist role, or tell us what evidence
+            a useful Helios profile should make visible.
+          </p>
+          <div className="contributeActions">
+            <a
+              className="primaryButton"
+              href="https://github.com/desync-org/helios-marketplace/issues/new?title=Model%20request%3A%20"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Request a model
+              <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
+            </a>
+            <a
+              className="secondaryButton"
+              href="https://github.com/desync-org/helios-marketplace/issues"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View open issues
+              <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <div className="footerBrand">
           <span className="brandMark" aria-hidden="true">

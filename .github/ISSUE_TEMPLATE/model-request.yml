@@ -1,0 +1,40 @@
+name: Model request
+description: Suggest a small language model for the Helios Marketplace.
+title: "Model request: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape the catalog. Marketplace profiles are currently descriptive previews, not compatibility certifications.
+  - type: input
+    id: model
+    attributes:
+      label: Model and version
+      description: Link to the official model card or repository when possible.
+      placeholder: "Example: organization/model-name"
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Suggested Helios role
+      description: What bounded work should this model be considered for?
+      placeholder: "Planning, code repair, review, research, vision..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Useful evidence
+      description: Share license, hardware, benchmark, or runtime evidence that should appear on the profile.
+    validations:
+      required: false
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Preview boundary
+      options:
+        - label: I understand a catalog entry would not certify Helios compatibility or connect an install flow.
+          required: true
+
