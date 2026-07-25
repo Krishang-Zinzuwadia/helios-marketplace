@@ -4,28 +4,28 @@ import {
   Code2,
   Sparkles,
 } from "lucide-react";
-import { ModelCatalog } from "@/components/model-catalog";
+import { SpecialistCatalog } from "@/components/specialist-catalog";
 
-const previewModels = [
+const previewSpecialists = [
   {
-    maker: "Google",
-    name: "Gemma 3",
-    size: "4B",
-    use: "Multimodal",
+    lane: "BUILD / INTERFACE",
+    name: "Front-end SLM",
+    output: "Accessible UI",
+    domain: "BUILD",
     tone: "light",
   },
   {
-    maker: "Qwen",
-    name: "Qwen2.5 Coder",
-    size: "7B",
-    use: "Code",
+    lane: "BUILD / SERVICES",
+    name: "Back-end SLM",
+    output: "Tested service",
+    domain: "BUILD",
     tone: "mid",
   },
   {
-    maker: "Microsoft",
-    name: "Phi-4 Mini",
-    size: "3.8B",
-    use: "Reasoning",
+    lane: "OPERATE / DELIVERY",
+    name: "DevOps SLM",
+    output: "Release pipeline",
+    domain: "OPERATE",
     tone: "dark",
   },
 ];
@@ -59,7 +59,7 @@ export default function Home() {
         </nav>
 
         <a className="headerAction" href="#catalog">
-          Explore models
+          Explore specialists
           <ArrowDown size={14} strokeWidth={1.8} aria-hidden="true" />
         </a>
       </header>
@@ -75,12 +75,12 @@ export default function Home() {
             <span>Serious work.</span>
           </h1>
           <p className="heroLead">
-            Find capable, compact models for the Helios local runtime—selected
-            for the work you want to keep close.
+            Browse 15 role-focused small-model blueprints for the Helios local
+            runtime—each scoped to a clear job, input, output, and boundary.
           </p>
           <div className="heroActions">
             <a className="primaryButton" href="#catalog">
-              Browse the catalog
+              Browse specialists
               <ArrowDown size={16} strokeWidth={1.8} aria-hidden="true" />
             </a>
             <a
@@ -95,29 +95,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="heroStage" aria-label="A preview of models in the catalog">
+        <div
+          className="heroStage"
+          aria-label="A preview of specialist SLMs in the catalog"
+        >
           <div className="stageTopline">
             <span>CATALOG / PREVIEW</span>
             <span className="status">
               <i />
-              15 MODELS
+              15 SPECIALISTS
             </span>
           </div>
           <div className="modelStack">
-            {previewModels.map((model, index) => (
+            {previewSpecialists.map((specialist, index) => (
               <article
-                className={`previewCard ${model.tone}`}
-                key={model.name}
+                className={`previewCard ${specialist.tone}`}
+                key={specialist.name}
                 style={{ "--index": index } as React.CSSProperties}
               >
                 <div className="previewIndex">0{index + 1}</div>
                 <div className="previewMain">
-                  <span>{model.maker}</span>
-                  <h2>{model.name}</h2>
+                  <span>{specialist.lane}</span>
+                  <h2>{specialist.name}</h2>
                 </div>
                 <div className="previewMeta">
-                  <span>{model.use}</span>
-                  <strong>{model.size}</strong>
+                  <span>{specialist.output}</span>
+                  <strong>{specialist.domain}</strong>
                 </div>
                 <ArrowUpRight
                   className="previewArrow"
@@ -129,9 +132,9 @@ export default function Home() {
             ))}
           </div>
           <div className="stageFooter">
-            <span>LOCAL-FIRST</span>
-            <span>OPEN ECOSYSTEM</span>
-            <span>CURATED SPECS</span>
+            <span>ROLE-SCOPED</span>
+            <span>CLEAR OUTPUTS</span>
+            <span>POLICY-BOUND</span>
           </div>
         </div>
       </section>
@@ -139,15 +142,15 @@ export default function Home() {
       <div className="signalStrip" aria-label="Marketplace principles">
         <div>
           <span>01</span>
-          <strong>Compact by design</strong>
+          <strong>Role-specific by design</strong>
         </div>
         <div>
           <span>02</span>
-          <strong>Built to stay close</strong>
+          <strong>Clear inputs and outputs</strong>
         </div>
         <div>
           <span>03</span>
-          <strong>Clear model metadata</strong>
+          <strong>Explicit operating boundaries</strong>
         </div>
       </div>
 
@@ -155,15 +158,15 @@ export default function Home() {
         <div className="sectionHeading">
           <div>
             <span className="sectionKicker">THE CATALOG / 001</span>
-            <h2 id="catalog-title">Find your next small model.</h2>
+            <h2 id="catalog-title">Find the right specialist.</h2>
           </div>
           <p>
-            A focused starting set for reasoning, code, vision, and everyday
-            language work.
+            Front-end, back-end, DevOps, security, data, QA, and more—each
+            scoped to a concrete delivery lane.
           </p>
         </div>
 
-        <ModelCatalog />
+        <SpecialistCatalog />
       </section>
 
       <section className="principles" id="principles" aria-labelledby="principles-title">
@@ -173,9 +176,9 @@ export default function Home() {
         </div>
         <div className="principlesBody">
           <p>
-            The biggest model is not always the right model. Helios is built
-            around smaller, focused systems that can live closer to your work,
-            your tools, and your rules.
+            One general model is not always the right tool. Helios is built
+            around smaller, focused systems with a known job, a deliberate
+            handoff, and a boundary they should not cross.
           </p>
           <a
             href="https://github.com/desync-org/helios-marketplace"
@@ -196,32 +199,32 @@ export default function Home() {
         <div className="statusLedger" aria-label="Current marketplace status">
           <div>
             <span>01 / CATALOG</span>
-            <strong>15 hardcoded profiles</strong>
+            <strong>15 hardcoded specialists</strong>
           </div>
           <div>
-            <span>02 / INSTALLS</span>
-            <strong>Not connected yet</strong>
+            <span>02 / RUNTIME</span>
+            <strong>Manifests not connected</strong>
           </div>
           <div>
             <span>03 / EVIDENCE</span>
-            <strong>Compatibility pending</strong>
+            <strong>Evaluations pending</strong>
           </div>
         </div>
         <div className="contributeCopy">
           <span className="sectionKicker">OPEN REGISTRY / 003</span>
-          <h2 id="contribute-title">What should Helios run next?</h2>
+          <h2 id="contribute-title">What should Helios specialize in next?</h2>
           <p>
-            Request a model, suggest a specialist role, or tell us what evidence
-            a useful Helios profile should make visible.
+            Suggest a bounded role, define the input and expected output, and
+            tell us which operating boundary the profile should make visible.
           </p>
           <div className="contributeActions">
             <a
               className="primaryButton"
-              href="https://github.com/desync-org/helios-marketplace/issues/new?title=Model%20request%3A%20"
+              href="https://github.com/desync-org/helios-marketplace/issues/new?title=Specialist%20request%3A%20"
               target="_blank"
               rel="noreferrer"
             >
-              Request a model
+              Request a specialist
               <ArrowUpRight size={16} strokeWidth={1.6} aria-hidden="true" />
             </a>
             <a
@@ -244,7 +247,7 @@ export default function Home() {
           </span>
           <span>HELIOS MARKETPLACE</span>
         </div>
-        <p>Small models, selected with intent.</p>
+        <p>Small models, scoped to real work.</p>
         <span>© 2026 DESYNC</span>
       </footer>
     </main>

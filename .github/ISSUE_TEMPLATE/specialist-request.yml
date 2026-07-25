@@ -1,0 +1,55 @@
+name: Specialist SLM request
+description: Suggest a functional specialist role for the Helios Marketplace.
+title: "Specialist request: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape the catalog. These entries define role blueprints; they are not trained weights, installable packages, or runtime compatibility certifications yet.
+  - type: input
+    id: specialization
+    attributes:
+      label: Specialist name
+      description: Name the bounded role this SLM should perform.
+      placeholder: "Example: Accessibility Audit SLM"
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: Job to be done
+      description: What concrete responsibility should belong to this specialist?
+      placeholder: "Review a rendered product flow and report prioritized accessibility defects."
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Required inputs
+      description: What context or artifacts must the specialist receive?
+      placeholder: "Rendered pages, accessibility standard, target browsers..."
+    validations:
+      required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Expected outputs
+      description: What reviewable artifact should the specialist produce?
+      placeholder: "Ranked findings with evidence and remediation guidance..."
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Operating boundary and evidence
+      description: What must this role never do, and how should its work be verified?
+    validations:
+      required: true
+  - type: checkboxes
+    id: preview
+    attributes:
+      label: Preview boundary
+      options:
+        - label: I understand this request defines a catalog role, not a trained or Helios-compatible model package.
+          required: true

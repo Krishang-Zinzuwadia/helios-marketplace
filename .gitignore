@@ -30,4 +30,5 @@ next-env.d.ts
 # browser QA artifacts
 /.playwright-cli
 /output/playwright
+/output/*.log
 
