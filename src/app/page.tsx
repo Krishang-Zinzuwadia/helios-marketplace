@@ -1,12 +1,10 @@
 import {
   ArrowDown,
   ArrowUpRight,
-  Box,
   Code2,
-  Layers3,
-  Search,
   Sparkles,
 } from "lucide-react";
+import { ModelCatalog } from "@/components/model-catalog";
 
 const previewModels = [
   {
@@ -165,46 +163,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="catalogToolbar" aria-hidden="true">
-          <div className="searchPreview">
-            <Search size={16} strokeWidth={1.5} />
-            Search by model, maker, or task
-          </div>
-          <div className="filterPreview">All models</div>
-          <div className="filterPreview">Featured first</div>
-        </div>
-
-        <div className="catalogPreviewGrid">
-          {previewModels.map((model, index) => (
-            <article className="catalogPreviewCard" key={model.name}>
-              <div className="cardTop">
-                <span className="modelGlyph">
-                  {index === 0 ? (
-                    <Sparkles size={19} strokeWidth={1.4} />
-                  ) : index === 1 ? (
-                    <Layers3 size={19} strokeWidth={1.4} />
-                  ) : (
-                    <Box size={19} strokeWidth={1.4} />
-                  )}
-                </span>
-                <span className="sizePill">{model.size}</span>
-              </div>
-              <span className="maker">{model.maker}</span>
-              <h3>{model.name}</h3>
-              <p>
-                A compact model selected for thoughtful local workflows and a
-                clear path into the Helios ecosystem.
-              </p>
-              <div className="cardBottom">
-                <span>{model.use}</span>
-                <span className="viewLabel">
-                  View model
-                  <ArrowUpRight size={15} strokeWidth={1.6} />
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
+        <ModelCatalog />
       </section>
 
       <section className="principles" id="principles" aria-labelledby="principles-title">
