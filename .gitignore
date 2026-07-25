@@ -28,5 +28,6 @@ pnpm-debug.log*
 next-env.d.ts
 
 # browser QA artifacts
+/.playwright-cli
 /output/playwright
 
